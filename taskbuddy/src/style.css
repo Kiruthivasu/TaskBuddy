@@ -1,0 +1,177 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, Arial;
+  background: #f6f7fb;
+  color: #111;
+}
+
+/* APP */
+.App {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 26px;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  font-size: 18px;
+}
+
+/* INPUT */
+.task-form {
+  margin-bottom: 20px;
+}
+
+#inp {
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+}
+
+#inp input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+#inp button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* TASK LIST */
+.task-list {
+  list-style: none;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-list button {
+  margin-left: 6px;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* CLEAR */
+.clear-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.dark .App {
+  background: #111827;
+}
+
+/* TASKS */
+.dark .task-list li {
+  background: #1f2937;
+  border: 1px solid #374151;
+}
+
+/* INPUT FIX (IMPORTANT) */
+.dark #inp {
+  background: #1f2937;
+  border: 1px solid #374151;
+}
+
+.dark #inp input {
+  color: #ffffff; /* ✅ FIX: typed text visible */
+  background: transparent;
+}
+
+.dark #inp input::placeholder {
+  color: #9ca3af;
+}
+
+/* BUTTONS */
+.dark .task-list button {
+  background: #374151;
+  color: white;
+}
+
+.progress-tracker {
+  margin-top: 16px;
+}
+
+/* top text */
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* bar background */
+.progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* fill */
+.progress {
+  height: 100%;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
